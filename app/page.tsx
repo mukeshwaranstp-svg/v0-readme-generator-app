@@ -34,7 +34,7 @@ export default function Home() {
       }
 
       const data = await response.json()
-        setReadme(data.readme)
+       setReadme(data.readme)
     } catch (err) {
       setError(err instanceof Error ? err.message : "An unexpected error occurred")
     } finally {
