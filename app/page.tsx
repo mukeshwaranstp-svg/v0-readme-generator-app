@@ -33,8 +33,8 @@ export default function Home() {
         throw new Error("Failed to generate README")
       }
 
-      const data = await response.text()
-      setReadme(data)
+      const data = await response.json()
+      setReadme(data.readme)
     } catch (err) {
       setError(err instanceof Error ? err.message : "An unexpected error occurred")
     } finally {
