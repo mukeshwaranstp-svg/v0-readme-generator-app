@@ -34,6 +34,7 @@ export default function Home() {
       }
 
       const data = await response.text()
+      setReadme(data)
     } catch (err) {
       setError(err instanceof Error ? err.message : "An unexpected error occurred")
     } finally {
@@ -46,10 +47,10 @@ export default function Home() {
       <Header />
       <main className="flex-1 container mx-auto px-4 py-12 max-w-2xl">
         <InputForm onGenerate={handleGenerate} isLoading={isLoading} />
-        <OutputSection
-          readme={readme}
-          error={error}
-          isLoading={isLoading}
+        <OutputSection 
+          readme={readme} 
+          error={error} 
+          isLoading={isLoading} 
         />
       </main>
       <Footer />
