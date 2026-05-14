@@ -17,7 +17,7 @@ export default function Home() {
     setReadme(null)
 
     try {
-      const response = await fetch("http://localhost:5678/webhook-test/generate-readme", {
+      const response = await fetch("https://sanji-readme-kai.onrender.com/webhook/generate-readme", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
